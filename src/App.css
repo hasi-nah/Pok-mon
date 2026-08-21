@@ -2,37 +2,52 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  background-color: #f2f2f2;
+  background-color: #1e1e24;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
 }
 
-
+.sidebar-hero {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 340px;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 100;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.4);
+}
 
 .pokemon-grid {
+  margin-left: 370px;
+  padding: 30px 20px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 20px;
+  gap: 24px;
 }
-
 
 .pokemon-card {
   background-color: #ffffff;
-  border-radius: 5px;
+  border-radius: 16px;
   overflow: hidden;
-  transition: transform 0.2s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: #333333;
 }
 
 .pokemon-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }
 
 .image-wrapper {
-  background-color: #f2f2f2;
-  border-radius: 5px;
-  padding: 20px;
+  background-color: #f4f5f7;
+  border-radius: 12px;
+  margin: 12px;
+  padding: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,46 +55,50 @@ body {
 
 .image-wrapper img {
   width: 100%;
-  max-width: 180px;
-  height: auto;
+  height: 140px;
   object-fit: contain;
 }
 
 .pokemon-info {
-  padding: 10px 5px;
+  padding: 10px 16px 16px 16px;
+  text-align: center;
 }
 
 .pokemon-id {
-  color: #919191;
-  font-weight: bold;
-  font-size: 12px;
+  color: #aaa;
+  font-size: 13px;
+  font-weight: 700;
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
 .pokemon-name {
   font-size: 20px;
-  color: #313131;
+  font-weight: 700;
+  color: #2c3e50;
   margin-bottom: 10px;
 }
 
-/* Badges de types */
 .types-container {
   display: flex;
-  gap: 5px;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 .type-badge {
-  color: white;
-  padding: 3px 15px;
-  border-radius: 3px;
+  color: #ffffff;
+  padding: 4px 10px;
+  border-radius: 6px;
   font-size: 12px;
-  font-weight: bold;
+  font-weight: 600;
+  text-transform: capitalize;
 }
 
 .loading {
   text-align: center;
-  font-size: 24px;
-  margin-top: 50px;
-  color: #313131;
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 100px;
+  color: #ffffff;
 }
